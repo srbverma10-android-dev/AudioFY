@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "55352727206",
+    "firebase_url": "https://bahi-khata-ca7a2-default-rtdb.firebaseio.com",
+    "project_id": "bahi-khata-ca7a2",
+    "storage_bucket": "bahi-khata-ca7a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:55352727206:android:2b2324f798e7ebc71e8667",
+        "android_client_info": {
+          "package_name": "com.sourabhverma.bahikhata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "55352727206-443fgi0rii0nm8o21b3shi9re8vsu2qm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sourabhverma.bahikhata",
+            "certificate_hash": "e779f31a317b9ed26c00f65ff56de02be59e9d0a"
+          }
+        },
+        {
+          "client_id": "55352727206-v6t7unsoc7lodrch1pbf4k5jkgdi05nv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDx6YujLM3xw7uuOzoq5JE2mTAwvvPvBsI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "55352727206-v6t7unsoc7lodrch1pbf4k5jkgdi05nv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

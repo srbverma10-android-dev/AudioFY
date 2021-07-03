@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/bottomSheet"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:behavior_peekHeight="?actionBarSize"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    android:visibility="invisible"
+    android:background="#282828"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBarInBottomSheet"
+
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/cardViewInToolBar"
+
+                android:layout_width="?actionBarSize"
+                android:layout_height="match_parent"
+
+                app:cardCornerRadius="3dp"
+
+                android:layout_margin="1dp"
+
+                app:cardElevation="8dp"
+
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true">
+
+                <ImageView
+                    android:id="@+id/imageViewInToolBar"
+
+                    android:contentDescription="@string/image_content_description"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:id="@+id/textViewInToolBar"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+
+                android:layout_toStartOf="@+id/linearLayout5"
+                android:layout_toEndOf="@+id/cardViewInToolBar"
+
+                android:textColor="@color/white"
+                android:textSize="20sp"
+
+                android:paddingStart="8dp"
+                android:paddingEnd="2dp"
+
+                android:gravity="start"
+
+                android:singleLine="true"
+                android:scrollHorizontally="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                />
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentEnd="true"
+
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                >
+
+                <ImageView
+
+                    android:id="@+id/PreviousSongInToolBar"
+
+                    android:contentDescription="@string/image_content_description"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:background="@drawable/skip_previous"
+
+                    android:layout_marginEnd="4dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/PlayPauseButtonInToolBar"
+                    android:contentDescription="@string/image_content_description"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="4dp"
+
+                    android:visibility="gone"
+                    />
+
+                <ProgressBar
+
+                    android:id="@+id/progressBarInBottomSheet"
+
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="4dp"
+
+                    android:visibility="gone"
+                    />
+
+
+                <ImageView
+
+                    android:id="@+id/NextSongInToolBar"
+
+                    android:contentDescription="@string/image_content_description"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:background="@drawable/skip_next"
+
+                    android:layout_marginStart="4dp"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+
+        android:id="@+id/cutImageView"
+        android:contentDescription="@string/image_content_description"
+
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="24dp"
+
+        android:alpha="0"
+
+        android:clickable="true"
+
+        android:background="@drawable/arrow_down"
+        app:layout_constraintBottom_toBottomOf="@+id/toolBarInBottomSheet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolBarInBottomSheet"
+        android:focusable="true" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewInBottomSheet"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_margin="8dp"
+
+        app:cardElevation="16dp"
+        app:cardCornerRadius="8dp"
+
+        app:layout_constraintDimensionRatio="1:1"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBarInBottomSheet"
+        >
+        <ImageView
+            android:id="@+id/viewPagerBottomSheet"
+            android:contentDescription="@string/image_content_description"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+    <ImageView
+        android:id="@+id/borderBottomSheet"
+        android:contentDescription="@string/image_content_description"
+        android:layout_width="2dp"
+        android:layout_height="70sp"
+
+        android:background="@color/aqua"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewInBottomSheet"
+        app:layout_constraintTop_toTopOf="@+id/textViewInBottomSheet"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewInBottomSheet2"
+        />
+
+    <SeekBar
+        android:id="@+id/seekBarInBottomSheet"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="8dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/borderBottomSheet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        />
+
+    <TextView
+        android:id="@+id/seekBarStartTime"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textColor="@color/white"
+
+        app:layout_constraintTop_toBottomOf="@+id/seekBarInBottomSheet"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp"
+        />
+
+    <TextView
+        android:id="@+id/seekBarEndTime"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textColor="@color/white"
+
+        app:layout_constraintTop_toBottomOf="@+id/seekBarInBottomSheet"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewInBottomSheet"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="@id/borderBottomSheet"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewInBottomSheet"
+
+        android:textColor="@color/white"
+        android:textSize="24sp"
+
+        android:gravity="start"
+
+        android:singleLine="true"
+        android:scrollHorizontally="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewInBottomSheet2"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="@id/borderBottomSheet"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInBottomSheet"
+
+        android:textColor="@color/white"
+        android:textSize="16sp"
+
+        android:gravity="start"
+
+        android:singleLine="true"
+        android:scrollHorizontally="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+
+        android:paddingStart="8dp"
+        android:paddingEnd="0dp"
+        />
+
+    <ImageView
+        android:contentDescription="@string/image_content_description"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center_vertical"
+
+        android:layout_marginStart="16dp"
+
+        android:background="@drawable/heart"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center"
+
+        android:layout_marginTop="36dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/seekBarStartTime">
+
+        <ImageView
+            android:id="@+id/PreviousSongInBottomSheet"
+
+            android:layout_width="40dp"
+
+            android:layout_height="40dp"
+            android:layout_marginEnd="4dp"
+
+            android:background="@drawable/skip_previous"
+            android:contentDescription="@string/image_content_description" />
+
+        <ImageView
+            android:id="@+id/PlayPauseButtonInBottomSheet"
+            android:layout_width="40dp"
+
+            android:layout_height="40dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+
+            android:visibility="gone"
+
+            android:contentDescription="@string/image_content_description" />
+
+        <ProgressBar
+
+            android:id="@+id/progressBarInBottomSheet1"
+
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/NextSongInBottomSheet"
+
+            android:layout_width="40dp"
+
+            android:layout_height="40dp"
+            android:layout_marginStart="4dp"
+
+            android:background="@drawable/skip_next"
+            android:contentDescription="@string/image_content_description" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

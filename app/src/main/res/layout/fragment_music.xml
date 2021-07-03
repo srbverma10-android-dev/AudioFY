@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MusicFragment"
+    android:scrollbars="none"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPagerFragmentMusic"
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            app:layout_constraintDimensionRatio="16:9"
+
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.tabs.TabLayout
+
+            android:id="@+id/tabLayoutUpperSlider"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:tabRippleColor="@null"
+
+            android:background="@android:color/transparent"
+
+            app:tabGravity="center"
+
+            app:tabMode="scrollable"
+
+            app:tabMaxWidth="10dp"
+
+            app:tabIndicatorHeight="0dp"
+            app:tabIndicatorFullWidth="false"
+
+            app:layout_constraintBottom_toBottomOf="@+id/viewPagerFragmentMusic"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/recyclerViewMusicFragment"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:overScrollMode="never"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewPagerFragmentMusic" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.core.widget.NestedScrollView>
